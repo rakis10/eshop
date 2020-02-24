@@ -16,6 +16,6 @@
   "author": "Jakub Mrozek",
   "engines": {
     "node": "0.8.x",
-    "npm": "1.2.x"
+    "npm": "6.x.x"
   }
 }

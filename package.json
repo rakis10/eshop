@@ -6,7 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "3.0.x",
+    "express": "3.11.x",
     "express-resource": "1.0.x"
   },
   "repository": {
@@ -15,7 +15,7 @@
   },
   "author": "Jakub Mrozek",
   "engines": {
-    "node": "0.8.x",
-    "npm": "6.x.x"
+    "node": "12.13.x",
+    "npm": "6.12.x"
   }
 }

@@ -1,22 +1,11 @@
-var express  = require('express')
-  , resource = require('express-resource')
-    , mongoose = require('mongoose')
-  , config = require('./config')
-  , app = express();
+const express = require('express')
+const app = express()
+const port = 3000
 
-  //konfigurace a spojeni s databazi
-config.configure(app);
-config.connect(app);
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
-//controllery
-var PageController = require('./app/controllers/PageController');
-
-//modely
-var Page = require('./app/models/Page');
-
-//API stranek
-app.resource('pages', PageController, {base: '/api/', load: Page.findOneByUrl});
-
-//old
-//app.resource('pages', require('./app/pages'));
-app.listen(process.env.PORT || 5000);
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
